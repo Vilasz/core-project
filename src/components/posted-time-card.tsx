@@ -7,7 +7,7 @@ import { MessageCircle, MapPin, DollarSign, Calendar, Clock, Trash2 } from "luci
 interface PostedTime {
   id: string
   teacherId: string
-  date: Date
+  date: Date | string
   startTime: string
   endTime: string
   modality: string
@@ -126,7 +126,7 @@ export function PostedTimeCard({ postedTime, isOwner = false, onDelete }: Posted
       <div className="space-y-2 mb-4">
         <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
           <Calendar className="h-4 w-4 mr-2" />
-          {new Date(postedTime.date).toLocaleDateString("pt-BR")}
+          {new Date(postedTime.date as string).toLocaleDateString("pt-BR")}
         </div>
         <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
           <Clock className="h-4 w-4 mr-2" />

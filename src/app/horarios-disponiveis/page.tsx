@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button"
 interface PostedTime {
   id: string
   teacherId: string
-  date: string
+  date: Date | string
   startTime: string
   endTime: string
   modality: string
@@ -68,7 +68,6 @@ export default function PostedTimesPage() {
   }
 
   const isTeacher = session?.user?.role === "TEACHER"
-  const isStudent = session?.user?.role === "STUDENT"
   const myPostedTimes = isTeacher ? postedTimes.filter(pt => pt.teacherId === session?.user?.id) : []
 
   return (

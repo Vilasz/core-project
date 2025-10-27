@@ -65,7 +65,7 @@ export function BookingForm({ professor, studentId }: BookingFormProps) {
         const errorData = await response.json()
         setError(errorData.error || "Erro ao criar agendamento")
       }
-    } catch (error) {
+    } catch {
       setError("Erro de conexão. Tente novamente.")
     } finally {
       setIsSubmitting(false)

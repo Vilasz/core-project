@@ -64,7 +64,6 @@ export default function ClassRequestsPage() {
   }
 
   const isStudent = session?.user?.role === "STUDENT"
-  const isTeacher = session?.user?.role === "TEACHER"
   const myRequests = isStudent ? classRequests.filter(cr => cr.studentId === session?.user?.id) : []
 
   return (

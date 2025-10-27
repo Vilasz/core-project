@@ -1,5 +1,6 @@
 import { getServerSession } from "next-auth"
 import { redirect } from "next/navigation"
+import Link from "next/link"
 import { authOptions } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
 import { Navbar } from "@/components/navbar"
@@ -149,12 +150,12 @@ export default async function AlunoDashboard() {
               <div className="text-center py-8">
                 <Calendar className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                 <p className="text-gray-500 mb-4">Nenhuma aula agendada ainda</p>
-                <a
+                <Link
                   href="/professores"
                   className="text-green-600 hover:text-green-700 font-medium"
                 >
                   Encontrar professores
-                </a>
+                </Link>
               </div>
             )}
           </div>
@@ -216,7 +217,7 @@ export default async function AlunoDashboard() {
             <h2 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100">Ações Rápidas</h2>
             
             <div className="space-y-4">
-              <a
+              <Link
                 href="/professores"
                 className="flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
               >
@@ -225,9 +226,9 @@ export default async function AlunoDashboard() {
                   <h3 className="font-medium text-gray-900 dark:text-gray-100">Encontrar Professores</h3>
                   <p className="text-sm text-gray-700 dark:text-gray-300">Buscar novos professores</p>
                 </div>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/horarios-disponiveis"
                 className="flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
               >
@@ -236,9 +237,9 @@ export default async function AlunoDashboard() {
                   <h3 className="font-medium text-gray-900 dark:text-gray-100">Horários Disponíveis</h3>
                   <p className="text-sm text-gray-700 dark:text-gray-300">Ver horários postados</p>
                 </div>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/solicitacoes"
                 className="flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
               >
@@ -247,7 +248,7 @@ export default async function AlunoDashboard() {
                   <h3 className="font-medium text-gray-900 dark:text-gray-100">Minhas Solicitações</h3>
                   <p className="text-sm text-gray-700 dark:text-gray-300">Gerenciar solicitações</p>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

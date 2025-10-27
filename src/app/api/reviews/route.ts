@@ -122,7 +122,10 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "ID do professor ou booking é obrigatório" }, { status: 400 })
     }
 
-    let whereClause: any = {}
+    const whereClause: {
+      teacherId?: string
+      bookingId?: string
+    } = {}
     if (teacherId) whereClause.teacherId = teacherId
     if (bookingId) whereClause.bookingId = bookingId
 

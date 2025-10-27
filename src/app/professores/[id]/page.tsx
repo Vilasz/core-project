@@ -126,7 +126,7 @@ export default async function ProfessorPage({ params }: ProfessorPageProps) {
                 Próximas Aulas
               </h3>
               <p className="text-gray-600 text-sm">
-                Selecione "Agendar Aula" para ver a disponibilidade completa e escolher um horário.
+                Selecione &quot;Agendar Aula&quot; para ver a disponibilidade completa e escolher um horário.
               </p>
             </div>
 

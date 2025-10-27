@@ -76,7 +76,11 @@ export async function GET(request: NextRequest) {
     const modality = searchParams.get("modality")
     const onlyAvailable = searchParams.get("onlyAvailable")
 
-    let whereClause: any = {}
+    const whereClause: {
+      teacherId?: string
+      modality?: "YOGA" | "MEDITATION" | "PILATES" | "FITNESS" | "DANCE" | "OTHER"
+      isAvailable?: boolean
+    } = {}
 
     // Professores só veem seus próprios posted times
     if (session.user.role === "TEACHER") {
@@ -85,7 +89,9 @@ export async function GET(request: NextRequest) {
     
     // Alunos podem ver todos os posted times
     if (teacherId) whereClause.teacherId = teacherId
-    if (modality) whereClause.modality = modality
+    if (modality && ["YOGA", "MEDITATION", "PILATES", "FITNESS", "DANCE", "OTHER"].includes(modality)) {
+      whereClause.modality = modality as "YOGA" | "MEDITATION" | "PILATES" | "FITNESS" | "DANCE" | "OTHER"
+    }
     if (onlyAvailable === "true") whereClause.isAvailable = true
 
     const postedTimes = await prisma.postedTime.findMany({

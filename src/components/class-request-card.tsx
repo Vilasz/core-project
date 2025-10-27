@@ -8,7 +8,7 @@ interface ClassRequest {
   id: string
   studentId: string
   modality: string
-  preferredDate?: Date | null
+  preferredDate?: Date | string | null
   preferredTime?: string | null
   duration: number
   maxPrice?: number | null
@@ -119,7 +119,7 @@ export function ClassRequestCard({ classRequest, isOwner = false, onDelete }: Cl
         {classRequest.preferredDate && (
           <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
             <Calendar className="h-4 w-4 mr-2" />
-            {new Date(classRequest.preferredDate).toLocaleDateString("pt-BR")}
+            {new Date(classRequest.preferredDate as string).toLocaleDateString("pt-BR")}
           </div>
         )}
         {classRequest.preferredTime && (

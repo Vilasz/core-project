@@ -76,7 +76,11 @@ export async function GET(request: NextRequest) {
     const modality = searchParams.get("modality")
     const onlyActive = searchParams.get("onlyActive")
 
-    let whereClause: any = {}
+    const whereClause: {
+      studentId?: string
+      modality?: "YOGA" | "MEDITATION" | "PILATES" | "FITNESS" | "DANCE" | "OTHER"
+      isActive?: boolean
+    } = {}
 
     // Alunos só veem suas próprias solicitações
     if (session.user.role === "STUDENT") {
@@ -85,7 +89,9 @@ export async function GET(request: NextRequest) {
     
     // Professores podem ver todas as solicitações
     if (studentId) whereClause.studentId = studentId
-    if (modality) whereClause.modality = modality
+    if (modality && ["YOGA", "MEDITATION", "PILATES", "FITNESS", "DANCE", "OTHER"].includes(modality)) {
+      whereClause.modality = modality as "YOGA" | "MEDITATION" | "PILATES" | "FITNESS" | "DANCE" | "OTHER"
+    }
     if (onlyActive === "true") whereClause.isActive = true
 
     const classRequests = await prisma.classRequest.findMany({

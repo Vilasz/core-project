@@ -160,7 +160,11 @@ export async function GET(request: NextRequest) {
     const studentId = searchParams.get("studentId")
     const status = searchParams.get("status")
 
-    let whereClause: any = {}
+    const whereClause: {
+      teacherId?: string
+      studentId?: string
+      status?: "PENDING" | "CONFIRMED" | "COMPLETED" | "CANCELLED"
+    } = {}
 
     if (session.user.role === "TEACHER") {
       whereClause.teacherId = session.user.id
@@ -170,7 +174,9 @@ export async function GET(request: NextRequest) {
 
     if (teacherId) whereClause.teacherId = teacherId
     if (studentId) whereClause.studentId = studentId
-    if (status) whereClause.status = status
+    if (status && ["PENDING", "CONFIRMED", "COMPLETED", "CANCELLED"].includes(status)) {
+      whereClause.status = status as "PENDING" | "CONFIRMED" | "COMPLETED" | "CANCELLED"
+    }
 
     const bookings = await prisma.booking.findMany({
       where: whereClause,

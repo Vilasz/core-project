@@ -5,25 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Calendar, Clock, DollarSign, MessageSquare } from "lucide-react"
 
-interface ClassRequest {
-  id: string
-  studentId: string
-  modality: string
-  preferredDate?: Date | null
-  preferredTime?: string | null
-  duration: number
-  maxPrice?: number | null
-  description?: string | null
-  contactPhone?: string | null
-  contactEmail?: string | null
-  isActive: boolean
-  user?: {
-    name: string | null
-    image: string | null
-    phone?: string | null
-  }
-}
-
 interface ClassRequestFormProps {
   studentId: string
   onSuccess?: () => void
@@ -80,7 +61,7 @@ export function ClassRequestForm({ studentId, onSuccess }: ClassRequestFormProps
         const errorData = await response.json()
         setError(errorData.error || "Erro ao criar solicitação")
       }
-    } catch (error) {
+    } catch {
       setError("Erro de conexão. Tente novamente.")
     } finally {
       setIsSubmitting(false)

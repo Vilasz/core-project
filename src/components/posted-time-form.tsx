@@ -5,28 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Calendar, Clock, DollarSign, MessageSquare } from "lucide-react"
 
-interface PostedTime {
-  id: string
-  teacherId: string
-  date: Date
-  startTime: string
-  endTime: string
-  modality: string
-  price: number
-  description?: string
-  contactPhone?: string
-  contactEmail?: string
-  user?: {
-    name: string | null
-    image: string | null
-    phone?: string | null
-    teacherProfile?: {
-      specialties: string[]
-      rating: number
-    }
-  }
-}
-
 interface PostedTimeFormProps {
   teacherId: string
   onSuccess?: () => void
@@ -76,7 +54,7 @@ export function PostedTimeForm({ teacherId, onSuccess }: PostedTimeFormProps) {
         const errorData = await response.json()
         setError(errorData.error || "Erro ao postar horário")
       }
-    } catch (error) {
+    } catch {
       setError("Erro de conexão. Tente novamente.")
     } finally {
       setIsSubmitting(false)
