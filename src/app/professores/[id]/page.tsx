@@ -6,6 +6,8 @@ import { ReviewList } from "@/components/review-list"
 import { Star, Clock, MapPin, Users, Calendar } from "lucide-react"
 import { prisma } from "@/lib/prisma"
 
+export const dynamic = 'force-dynamic'
+
 interface ProfessorPageProps {
   params: {
     id: string

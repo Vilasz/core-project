@@ -6,6 +6,8 @@ import { prisma } from "@/lib/prisma"
 import { Navbar } from "@/components/navbar"
 import { Calendar, Clock, Star, User } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export default async function AlunoDashboard() {
   const session = await getServerSession(authOptions)
 

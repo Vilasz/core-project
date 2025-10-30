@@ -5,6 +5,8 @@ import { prisma } from "@/lib/prisma"
 import { Navbar } from "@/components/navbar"
 import { Calendar, DollarSign, Users, Star } from "lucide-react"
 
+export const dynamic = 'force-dynamic'
+
 export default async function ProfessorDashboard() {
   const session = await getServerSession(authOptions)
 

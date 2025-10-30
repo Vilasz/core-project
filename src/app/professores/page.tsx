@@ -3,6 +3,8 @@ import { ProfessorCard } from "@/components/professor-card"
 import { SearchFilters } from "@/components/search-filters"
 import { prisma } from "@/lib/prisma"
 
+export const dynamic = 'force-dynamic'
+
 export default async function ProfessoresPage() {
   // Buscar professores com seus perfis
   const professores = await prisma.user.findMany({
