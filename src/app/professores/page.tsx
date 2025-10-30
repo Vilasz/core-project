@@ -2,6 +2,8 @@ import { Navbar } from "@/components/navbar"
 import { ProfessorCard } from "@/components/professor-card"
 import { SearchFilters } from "@/components/search-filters"
 import { prisma } from "@/lib/prisma"
+export const runtime = 'nodejs';
+
 
 export const dynamic = 'force-dynamic'
 

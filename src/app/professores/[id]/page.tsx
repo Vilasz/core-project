@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { ReviewList } from "@/components/review-list"
 import { Star, Clock, MapPin, Users, Calendar } from "lucide-react"
 import { prisma } from "@/lib/prisma"
+export const runtime = 'nodejs';
+
 
 export const dynamic = 'force-dynamic'
 

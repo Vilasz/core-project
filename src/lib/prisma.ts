@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+export const runtime = 'nodejs';
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined

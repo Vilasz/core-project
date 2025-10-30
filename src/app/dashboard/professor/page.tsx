@@ -3,6 +3,8 @@ import { redirect } from "next/navigation"
 import { authOptions } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
 import { Navbar } from "@/components/navbar"
+export const runtime = 'nodejs';
+
 import { Calendar, DollarSign, Users, Star } from "lucide-react"
 
 export const dynamic = 'force-dynamic'

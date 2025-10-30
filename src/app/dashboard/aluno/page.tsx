@@ -5,6 +5,7 @@ import { authOptions } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
 import { Navbar } from "@/components/navbar"
 import { Calendar, Clock, Star, User } from "lucide-react"
+export const runtime = 'nodejs';
 
 export const dynamic = 'force-dynamic'
 

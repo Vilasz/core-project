@@ -6,6 +6,9 @@ import { prisma } from "@/lib/prisma"
 import { Navbar } from "@/components/navbar"
 import { BookingForm } from "@/components/booking-form"
 
+export const runtime = 'nodejs';
+
+
 interface BookingPageProps {
   params: {
     professorId: string

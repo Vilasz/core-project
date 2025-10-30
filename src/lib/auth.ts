@@ -4,6 +4,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
+export const runtime = 'nodejs';
+
 
 export const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET, // <= OBRIGATÓRIO
