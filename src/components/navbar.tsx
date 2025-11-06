@@ -23,11 +23,16 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/professores">
+            <Link href="/auth/signup">
               <Button variant="ghost" className="flex items-center gap-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800">
-                <Search className="h-4 w-4" />
-                <span className="hidden lg:inline">Encontrar Professores</span>
-                <span className="lg:hidden">Buscar</span>
+                <span className="hidden lg:inline">Cadastro Professores</span>
+                <span className="lg:hidden">Cadastrar</span>
+              </Button>
+            </Link>
+
+            <Link href="/como-funciona">
+              <Button variant="ghost" className="text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800">
+                Como Funciona
               </Button>
             </Link>
 
@@ -100,6 +105,18 @@ export function Navbar() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-gray-200 dark:border-gray-700 py-4 space-y-2">
+            <Link href="/auth/signup" onClick={() => setMobileMenuOpen(false)}>
+              <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800">
+                Cadastrar Professores
+              </Button>
+            </Link>
+
+            <Link href="/como-funciona" onClick={() => setMobileMenuOpen(false)}>
+              <Button variant="ghost" className="w-full justify-start text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800">
+                Como Funciona
+              </Button>
+            </Link>
+
             <Link href="/professores" onClick={() => setMobileMenuOpen(false)}>
               <Button variant="ghost" className="w-full justify-start flex items-center gap-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800">
                 <Search className="h-4 w-4" />

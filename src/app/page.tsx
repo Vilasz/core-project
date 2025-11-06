@@ -21,14 +21,16 @@ export default function Home() {
               Professores credenciados, horários flexíveis e pagamento seguro.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/professores">
+              <Link href="/auth/signup">
                 <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 shadow-sm dark:bg-gray-100 dark:text-green-700 dark:hover:bg-gray-200">
-                  Encontrar Professores
+                  Seja professor
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 shadow-sm dark:border-gray-300 dark:text-gray-100 dark:hover:bg-gray-100 dark:hover:text-green-700">
-                Como Funciona
-              </Button>
+              <Link href="/como-funciona">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 shadow-sm dark:border-gray-300 dark:text-gray-100 dark:hover:bg-gray-100 dark:hover:text-green-700">
+                  Saiba mais
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
