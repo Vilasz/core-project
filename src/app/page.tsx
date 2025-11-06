@@ -9,14 +9,14 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-20 dark:from-green-700 dark:to-green-800">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-12 sm:py-16 lg:py-20 dark:from-green-700 dark:to-green-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
               Conecte-se com os melhores 
               <span className="block text-green-200 dark:text-green-300">professores de wellness</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-green-100 dark:text-green-200 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-green-100 dark:text-green-200 max-w-3xl mx-auto px-4">
               Encontre aulas de yoga, meditação, pilates e muito mais. 
               Professores credenciados, horários flexíveis e pagamento seguro.
             </p>
@@ -35,13 +35,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 px-2">
               Por que escolher nosso marketplace?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
               Oferecemos a melhor experiência tanto para alunos quanto para professores
             </p>
           </div>
@@ -91,12 +91,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-white dark:bg-gray-800 py-20">
+      <section className="bg-white dark:bg-gray-800 py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-6 px-2">
             Pronto para começar sua jornada de wellness?
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 px-4">
             Explore nossos professores e encontre a aula perfeita para você
           </p>
           <Link href="/professores">
@@ -108,21 +108,21 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12">
+      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Wellness Marketplace</h3>
-            <p className="text-gray-400 dark:text-gray-500 mb-8">
+            <h3 className="text-xl sm:text-2xl font-poppins font-black mb-3 sm:mb-4">Core</h3>
+            <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500 mb-6 sm:mb-8">
               Conectando pessoas através do bem-estar
             </p>
-            <div className="flex justify-center space-x-6">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base">
               <a href="#" className="text-gray-400 hover:text-white dark:text-gray-500 dark:hover:text-gray-300">Sobre</a>
               <a href="#" className="text-gray-400 hover:text-white dark:text-gray-500 dark:hover:text-gray-300">Contato</a>
               <a href="#" className="text-gray-400 hover:text-white dark:text-gray-500 dark:hover:text-gray-300">Privacidade</a>
               <a href="#" className="text-gray-400 hover:text-white dark:text-gray-500 dark:hover:text-gray-300">Termos</a>
             </div>
             <p className="text-gray-500 dark:text-gray-600 text-sm mt-8">
-              © 2024 Wellness Marketplace. Todos os direitos reservados.
+              © 2024 Core. Todos os direitos reservados.
             </p>
           </div>
         </div>

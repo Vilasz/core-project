@@ -75,12 +75,12 @@ export default function PostedTimesPage() {
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8 flex justify-between items-center">
+        <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
               Horários Disponíveis
             </h1>
-            <p className="text-gray-600 dark:text-gray-300 mt-2">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mt-2">
               Professores postando seus horários livres
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function PostedTimesPage() {
           {isTeacher && (
             <Button
               onClick={() => setShowForm(!showForm)}
-              className="bg-green-600 hover:bg-green-700 text-white dark:bg-green-500 dark:hover:bg-green-600"
+              className="bg-green-600 hover:bg-green-700 text-white dark:bg-green-500 dark:hover:bg-green-600 w-full sm:w-auto"
             >
               <Plus className="h-4 w-4 mr-2" />
               Postar Horário

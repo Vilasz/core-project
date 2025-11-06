@@ -14,7 +14,10 @@ export function ThemeToggle() {
   }, [])
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
+    // Get current effective theme (if system, detect it)
+    const root = window.document.documentElement
+    const isDark = root.classList.contains("dark")
+    const newTheme = isDark ? "light" : "dark"
     setTheme(newTheme)
   }
 
